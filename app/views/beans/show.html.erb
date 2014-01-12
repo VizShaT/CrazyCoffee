@@ -1,0 +1,28 @@
+
+
+<table class="table table-hover">
+<tr>
+  <th><b>Name:</b></th>
+  <td><%=h @bean.title %></td>
+</tr>
+
+<tr>
+  <th><b>Description:</b></th>
+  <td><%=h @bean.description %></td>
+</p>
+
+<tr>
+  <th><b>Location:</b></th>
+  <td><%=h @bean.location %></td>
+</tr>
+</table>
+
+<%= link_to 'Back', beans_path %> | <%= link_to 'Edit', edit_bean_path(@bean) %>
+
+<h2>Comments</h2>
+
+<%= render @bean.comments %>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
